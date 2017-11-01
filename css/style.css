@@ -19,3 +19,13 @@ html, body {
   font-family: sans-serif
 }
 
+
+/*--------------------------------
+        BAR CHART by Chart.js
+/*--------------------------------*/
+
+#myChart{
+	width: 50%;
+	height: 50%;
+}
+
