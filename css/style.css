@@ -1,0 +1,21 @@
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/*-----------------------
+        BAR CHART
+/*----------------------*/
+
+.bar {
+  fill: #0080FF;
+  /* stroke: black; */
+  /* stroke-width: 5; */
+}
+
+.text {
+  fill: black;
+  font-family: sans-serif
+}
+
