@@ -34,8 +34,34 @@ new Chart(document.getElementById("bar-chart-grouped"), {
 	    title: {
 	        display: true,
 	        text: 'Lagersaldo'
-      	}
+      	}/*,
+        scales: {
+            yAxes: [{
+                display: false
+            }],
+
+        }*/
     }
+});
+
+//https://stackoverflow.com/questions/31631354/how-to-display-data-values-on-chart-js
+//Add plugin to display values of each bar
+Chart.pluginService.register({
+    afterDraw: function(chartInstance) {
+        var ctx = chartInstance.chart.ctx;
+
+        // render the value of the chart above the bar
+        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+
+        chartInstance.data.datasets.forEach(function (dataset) {
+            for (var i = 0; i < dataset.data.length; i++) {
+                var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                ctx.fillText(dataset.data[i], model.x, model.y - 2);
+            }
+        });
+  }
 });
 
 /************************************************************
