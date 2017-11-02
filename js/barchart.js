@@ -3,41 +3,35 @@
 *************************************************************/
 
 var Cupertino = new Cupertino();
-var Norrköping = new Norrköping();
+var Norrkoping = new Norrkoping();
 var Frankfurt = new Frankfurt();
 
-console.log("total value: " + Cupertino.total_value);
-console.log(Cupertino);
-console.log("total value: " + Norrköping.total_value);
-console.log(Norrköping);
-console.log("total value: " + Frankfurt.total_value);
-console.log(Frankfurt);
 
 new Chart(document.getElementById("bar-chart-grouped"), {
     type: 'bar',
     data: {
-      labels: ["Cupertino", "Norrköping", "Frankfurt"],
+      labels: ["Cupertino", "Norrkoping", "Frankfurt"],
       datasets: [
         {
           label: "jTelefon",
           backgroundColor: "rgba(255, 99, 132, 0.2)",
           borderColor: "rgba(255, 99, 132, 1)",
           borderWidth: 1,
-          data: [Cupertino.jTelefon, Norrköping.jTelefon, Frankfurt.jTelefon]
+          data: [Cupertino.jTelefon, Norrkoping.jTelefon, Frankfurt.jTelefon]
         }, 
         {
           label: "jPlatta",
           backgroundColor: "rgba(54, 162, 235, 0.2)",
           borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 1,
-          data: [Cupertino.jPlatta, Norrköping.jPlatta, Frankfurt.jPlatta]
+          data: [Cupertino.jPlatta, Norrkoping.jPlatta, Frankfurt.jPlatta]
         },
         {
-          label: "Päronklocka",
+          label: "Paronklocka",
           backgroundColor: "rgba(75, 192, 192, 0.2)",
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
-          data: [Cupertino.Päronklocka, Norrköping.Päronklocka, Frankfurt.Päronklocka]
+          data: [Cupertino.Paronklocka, Norrkoping.Paronklocka, Frankfurt.Paronklocka]
         }
       ]
     },
