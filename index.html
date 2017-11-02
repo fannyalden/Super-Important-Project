@@ -41,29 +41,77 @@
 
 <body>
 	<header>
+        <p id="date">
+            <script> document.write(new Date().toLocaleDateString()); </script>
+        </p>
+        <h1> Lagersaldo </h1>
+        <br><br><br>
 	</header>
 
-    <!-- Display grouped bar chart -->
-    <canvas id="bar-chart-grouped" width="800" height="450"></canvas>
-    <br><br><br>
-
-    <div class ="col-lg-12">
+    <!--*******************************
+        BAR CHARTS AND CITY BUTTONS
+    ***********************************-->
+    <div class ="col-sm-12">
         <div class="row">
         </div>
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-4">
+                <!-- Display grouped bar chart for Cupertino-->
+                <canvas id="bar-chart-grouped1" width="800" height="450"></canvas>
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <button type="button" id="citybutton">Cupertino</button>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <!-- Display grouped bar chart for Norrköping-->
+                <canvas id="bar-chart-grouped2" width="800" height="450"></canvas>
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <button type="button" id="citybutton">Norrköping</button>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <!-- Display grouped bar chart for Frankfurt-->
+                <canvas id="bar-chart-grouped3" width="800" height="450"></canvas>
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <button type="button" id="citybutton">Frankfurt</button>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+        </div>     
+    </div>
+   
+
+    <!--*******************************
+            UPDATE BUTTON
+    ***********************************-->
+    <div class ="col-sm-12">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 text-center">
                 <!-- Button -->
                 <button type="button" id="updatebutton">Uppdatera lagersaldo</button>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-sm-4"></div>
         </div>     
     </div>
 
 
-
-
-<!-- Add scripts -->
+<!--*******************************
+    SCRIPTS
+***********************************-->
 <script src="js/main.js"></script>
 <script src="js/donutchart.js"></script>
 <script src="js/barchart.js"></script>

@@ -13,40 +13,126 @@ console.log(Norrköping);
 console.log("total value: " + Frankfurt.total_value);
 console.log(Frankfurt);
 
-new Chart(document.getElementById("bar-chart-grouped"), {
+new Chart(document.getElementById("bar-chart-grouped1"), {
     type: 'bar',
     data: {
-      labels: ["Cupertino", "Norrköping", "Frankfurt"],
+      //labels: ["Cupertino"],
       datasets: [
         {
           label: "jTelefon",
           backgroundColor: "rgba(255, 99, 132, 0.6)",
           borderColor: "rgba(255, 99, 132, 1)",
           borderWidth: 1,
-          data: [Cupertino.jTelefon, Norrköping.jTelefon, Frankfurt.jTelefon]
+          data: [Cupertino.jTelefon]
         }, 
         {
           label: "jPlatta",
           backgroundColor: "rgba(54, 162, 235, 0.6)",
           borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 1,
-          data: [Cupertino.jPlatta, Norrköping.jPlatta, Frankfurt.jPlatta]
+          data: [Cupertino.jPlatta]
         },
         {
           label: "Päronklocka",
           backgroundColor: "rgba(75, 192, 192, 0.6)",
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
-          data: [Cupertino.Päronklocka, Norrköping.Päronklocka, Frankfurt.Päronklocka]
+          data: [Cupertino.Päronklocka]
         }
       ]
     },
     options: {
     	legend: { display: true },
 	    title: {
-	        display: true,
+	        display: false,
 	        text: 'Lagersaldo'
       	},
+        scales: {
+            yAxes: [{
+                display: false
+            }],
+
+        }
+    }
+});
+
+new Chart(document.getElementById("bar-chart-grouped2"), {
+    type: 'bar',
+    data: {
+      //labels: ["Norrköping"],
+      datasets: [
+        {
+          label: "jTelefon",
+          backgroundColor: "rgba(255, 99, 132, 0.6)",
+          borderColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 1,
+          data: [Norrköping.jTelefon]
+        }, 
+        {
+          label: "jPlatta",
+          backgroundColor: "rgba(54, 162, 235, 0.6)",
+          borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 1,
+          data: [Norrköping.jPlatta]
+        },
+        {
+          label: "Päronklocka",
+          backgroundColor: "rgba(75, 192, 192, 0.6)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1,
+          data: [Norrköping.Päronklocka]
+        }
+      ]
+    },
+    options: {
+      legend: { display: true },
+      title: {
+          display: false,
+          text: 'Lagersaldo'
+        },
+        scales: {
+            yAxes: [{
+                display: false
+            }],
+
+        }
+    }
+});
+
+new Chart(document.getElementById("bar-chart-grouped3"), {
+    type: 'bar',
+    data: {
+      //labels: ["Frankfurt"],
+      datasets: [
+        {
+          label: "jTelefon",
+          backgroundColor: "rgba(255, 99, 132, 0.6)",
+          borderColor: "rgba(255, 99, 132, 1)",
+          borderWidth: 1,
+          data: [Frankfurt.jTelefon]
+        }, 
+        {
+          label: "jPlatta",
+          backgroundColor: "rgba(54, 162, 235, 0.6)",
+          borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 1,
+          data: [Frankfurt.jPlatta]
+        },
+        {
+          label: "Päronklocka",
+          backgroundColor: "rgba(75, 192, 192, 0.6)",
+          borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 1,
+          data: [Frankfurt.Päronklocka]
+        }
+      ]
+    },
+    options: {
+      legend: { display: true },
+      title: {
+          display: false,
+          text: 'Lagersaldo'
+        },
         scales: {
             yAxes: [{
                 display: false
