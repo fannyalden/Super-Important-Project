@@ -1,6 +1,11 @@
 /************************************************************
     Grouped bar chart
 *************************************************************/
+
+var Cupertino = new Cupertino();
+var Norrköping = new Norrköping();
+var Frankfurt = new Frankfurt();
+
 new Chart(document.getElementById("bar-chart-grouped"), {
     type: 'bar',
     data: {
@@ -11,21 +16,21 @@ new Chart(document.getElementById("bar-chart-grouped"), {
           backgroundColor: "rgba(255, 99, 132, 0.2)",
           borderColor: "rgba(255, 99, 132, 1)",
           borderWidth: 1,
-          data: [170000,55000,101700]
+          data: [Cupertino.jTelefon, Norrköping.jTelefon, Frankfurt.jTelefon]
         }, 
         {
           label: "jPlatta",
           backgroundColor: "rgba(54, 162, 235, 0.2)",
           borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 1,
-          data: [41500,104300,72400]
+          data: [Cupertino.jPlatta, Norrköping.jPlatta, Frankfurt.jPlatta]
         },
         {
           label: "Päronklocka",
           backgroundColor: "rgba(75, 192, 192, 0.2)",
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
-          data: [90000,38000,25000]
+          data: [Cupertino.Päronklocka, Norrköping.Päronklocka, Frankfurt.Päronklocka]
         }
       ]
     },
