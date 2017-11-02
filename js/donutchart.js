@@ -42,30 +42,35 @@ new Chart(document.getElementById("doughnut-chart"), {
     }
 });
 
+//Display numbers with commas 
 function numberWithCommas(x) {
     var parts = x.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
 }
 
-function displayInfo (){
-    //Display information about the warehouse in Frankfurt
+//Display information about the warehouse in Frankfurt
+function displayFrankfurt (){  
     document.getElementById("FrankfurtInfo").innerHTML = "Lagernummer: " + Frankfurt.lagerID 
     + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Frankfurt.total_products)
     + "<br>" + "jTelefoner: " + numberWithCommas(Frankfurt.jTelefon)
     + "<br>" + "jPlattor: " + numberWithCommas(Frankfurt.jPlatta)
     + "<br>" + "Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka)
     + "<br>" + "Totalt värde: " + numberWithCommas(Frankfurt.total_value);
+}
 
-    //Display information about the warehouse in Norrköping
+//Display information about the warehouse in Norrköping
+function displayNorrkoping () {  
     document.getElementById("NorrkopingInfo").innerHTML = "Lagernummer: " + Norrkoping.lagerID 
     + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Norrkoping.total_products)
     + "<br>" + "jTelefoner: " + numberWithCommas(Norrkoping.jTelefon)
     + "<br>" + "jPlattor: " + numberWithCommas(Norrkoping.jPlatta)
     + "<br>" + "Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka)
     + "<br>" + "Totalt värde: " + numberWithCommas(Norrkoping.total_value);
+}
 
-    //Display information about the warehouse in Cupertino
+//Display information about the warehouse in Cupertino
+function displayCupertino () {  
     document.getElementById("CupertinoInfo").innerHTML = "Lagernummer: " + Cupertino.lagerID 
     + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
     + "<br>" + "jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
