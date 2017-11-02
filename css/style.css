@@ -3,7 +3,7 @@ html, body {
   margin-left: 2%;
   margin-right: 2%;
   margin-top: 4%;
-  width: 100%;
+  width: 96%;
 }
 
 h1 {
@@ -17,6 +17,17 @@ h1 {
   color: #555555;
 }
 
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
 
 /*--------------------------------
         BAR CHART by Chart.js
