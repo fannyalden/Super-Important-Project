@@ -27,7 +27,7 @@ function Cupertino() {
 	//Capacity for each product
 	this.jTelefon_cap = 200000;
 	this.jPlatta_cap = 50000;
-	this.Paronklocka_cap = 90000;
+	this.Paronklocka_cap = 100000;
 
 	//Total number of products
 	this.total_products = this.jTelefon + this.jPlatta + this.Paronklocka;
@@ -37,13 +37,12 @@ function Cupertino() {
 
 	//Total price 
 	this.total_value = this.Price.jTelefon * this.jTelefon 
-						+ this.Price.jPlatta * this.jPlatta 
-						+ this.Price.Paronklocka * this.Paronklocka;
+					 + this.Price.jPlatta * this.jPlatta 
+					 + this.Price.Paronklocka * this.Paronklocka;
 };
 
 //Constructor for the warehouse in Norrkoping
 function Norrkoping() {
-
 	this.Price = new Price();
 	
 	//Warehouse ID

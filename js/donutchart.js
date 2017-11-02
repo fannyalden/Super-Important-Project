@@ -16,21 +16,21 @@ var Frankfurt = new Frankfurt();
           backgroundColor: ['#3e95cd', '#ffffff'], //"rgba(255, 99, 132, 0.2)", BLÅ
           //borderColor: '#ffffff',
           borderWidth: 5,
-          data: [Cupertino.jTelefon, Cupertino.jTelefon_cap]
+          data: [Cupertino.jTelefon, (Cupertino.jTelefon_cap-Cupertino.jTelefon)]
         }, 
         {
           label: "jPlatta",
           backgroundColor: ['#8e5ea2', '#ffffff'], // rgba(54, 162, 235, 0.2)", LILA
          // borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 5,
-          data: [Cupertino.jPlatta, Cupertino.jPlatta_cap]
+          data: [Cupertino.jPlatta, (Cupertino.jPlatta_cap-Cupertino.jPlatta)]
         },
         {
           label: "Paronklocka",
           backgroundColor: ['#3cba9f', '#ffffff'], //"rgba(75, 192, 192, 0.2)", GRÖN
          // borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 5,
-          data: [Cupertino.Paronklocka, Cupertino.Paronklocka_cap]
+          data: [Cupertino.Paronklocka, (Cupertino.Paronklocka_cap-Cupertino.Paronklocka)]
         }
       ]
     },
