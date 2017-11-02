@@ -45,9 +45,63 @@
             <script> document.write(new Date().toLocaleDateString()); </script>
         </p>
         <h1> Uppdatera saldo </h1>
-        <br><br><br>
+        <br>
 	</header>
 
+    <!-- FORM -->
+    <div class ="col-sm-12">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h2>För vilket lager gäller leveransen?</h2>
+                    <form action="">
+                        <input type="radio" name="warehouse" value="Cupertino" id="check_C" onclick="checkCity();"> Cupertino<br>
+                        <input type="radio" name="warehouse" value="Norrköping" id="check_N" onclick="checkCity();"> Norrköping<br>
+                        <input type="radio" name="warehouse" value="Frankfurt" id="check_F" onclick="checkCity();"> Frankfurt<br>
+                    </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h2>Välj önskad produkt:</h2>
+                    <form action="">
+                        <input type="radio" name="product" value="jTelefon" id="check_jTel" onclick="checkProduct();"> jTelefon<br>
+                        <input type="radio" name="product" value="jPlatta" id="check_jPlatta" onclick="checkProduct();"> jPlatta<br>
+                        <input type="radio" name="product" value="Päronklocka" id="check_Paron" onclick="checkProduct();"> Päronklocka<br>
+                    </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h2>In- eller utleverans?</h2>
+                    <form action="">
+                        <input type="radio" name="delivery" value="inleverans" id="check_in" onclick="checkDelivery();"> Inleverans<br>
+                        <input type="radio" name="delivery" value="utleverans" id="check_ut" onclick="checkDelivery();"> Utleverans<br>
+                    </form>
+                    <p id="feedback" align="center"> </p>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h2>Fyll i antal produkter för leverans:</h2>
+                    <form action="">
+                        <input type="text" name="transaction">
+                    </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <br><br><br>
+
+    </div>
 
 <!--*******************************
     SCRIPTS
@@ -55,6 +109,7 @@
 <script src="js/main.js"></script>
 <script src="js/donutchart.js"></script>
 <script src="js/barchart.js"></script>
+<script src="js/handleform.js"></script>
 
 </body>
 
