@@ -1,43 +1,43 @@
-// JavaScript source code
+/************************************************************
+    Grouped bar chart
+*************************************************************/
 
-var dataset = {things: [60, 40],};
-var width = 315;
-var height = 315;
-var radius = Math.min(width, height) / 2;
-var color = d3.scale.category20();
-var pie = d3.layout.pie().sort(null);
-var arc1 = d3.svg.arc()
-    .innerRadius(radius - 65)
-    .outerRadius(radius - 50);
+var Cupertino = new Cupertino();
+var Norrkoping = new Norrkoping();
+var Frankfurt = new Frankfurt();
 
-var arc2 = d3.svg.arc()
-    .innerRadius(radius - 45)
-    .outerRadius(radius - 30);
-
-var svg = d3.select("body")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", 264)
-    .append("g")
-    .attr("transform", "translate(" 
-        + width / 2.090 + "," 
-        + height / 2.38  + ")");
-
-var path = svg.selectAll("path")
-    .data(pie(dataset.things))
-    .enter().append("path")
-    .attr("fill", function(d, i) { return getColors(i); })
-    .attr("d", arc1);
-
-function getColors (i) {
-	 var colorArray = ['#5CB85C', '#ffffff']; //green, white
-	return colorArray[i];
-}
-
-svg.append("svg:text")
-    .attr("dy", ".35em")
-    .attr("text-anchor", "middle")
-    .attr("style","font-family:Ubuntu")
-    .attr("font-size","40")
-    .attr("fill","#5CB85C")
-    .text("60%");
+	new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+	//labels: ['jTelefon', 'jPlatta', 'Paronklocka'],
+      datasets: [
+        {
+          label: "jTelefon",
+          backgroundColor: ['#3e95cd', '#ffffff'], //"rgba(255, 99, 132, 0.2)", BLÅ
+          //borderColor: '#ffffff',
+          borderWidth: 5,
+          data: [Cupertino.jTelefon, Cupertino.jTelefon_cap]
+        }, 
+        {
+          label: "jPlatta",
+          backgroundColor: ['#8e5ea2', '#ffffff'], // rgba(54, 162, 235, 0.2)", LILA
+         // borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 5,
+          data: [Cupertino.jPlatta, Cupertino.jPlatta_cap]
+        },
+        {
+          label: "Paronklocka",
+          backgroundColor: ['#3cba9f', '#ffffff'], //"rgba(75, 192, 192, 0.2)", GRÖN
+         // borderColor: "rgba(75, 192, 192, 1)",
+          borderWidth: 5,
+          data: [Cupertino.Paronklocka, Cupertino.Paronklocka_cap]
+        }
+      ]
+    },
+    options: {
+      title: {
+	        display: true,
+	        text: 'Lagersaldo i Cupertino'
+      	},
+    }
+});

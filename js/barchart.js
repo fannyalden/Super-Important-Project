@@ -2,17 +2,6 @@
     Grouped bar chart
 *************************************************************/
 
-var Cupertino = new Cupertino();
-var Norrköping = new Norrköping();
-var Frankfurt = new Frankfurt();
-
-console.log("total value: " + Cupertino.total_value);
-console.log(Cupertino);
-console.log("total value: " + Norrköping.total_value);
-console.log(Norrköping);
-console.log("total value: " + Frankfurt.total_value);
-console.log(Frankfurt);
-
 new Chart(document.getElementById("bar-chart-grouped1"), {
     type: 'bar',
     data: {
@@ -33,11 +22,11 @@ new Chart(document.getElementById("bar-chart-grouped1"), {
           data: [Cupertino.jPlatta]
         },
         {
-          label: "Päronklocka",
-          backgroundColor: "rgba(75, 192, 192, 0.6)",
+          label: "Paronklocka",
+          backgroundColor: "rgba(75, 192, 192, 0.2)",
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
-          data: [Cupertino.Päronklocka]
+          data: [Cupertino.Paronklocka]
         }
       ]
     },
@@ -66,21 +55,21 @@ new Chart(document.getElementById("bar-chart-grouped2"), {
           backgroundColor: "rgba(255, 99, 132, 0.6)",
           borderColor: "rgba(255, 99, 132, 1)",
           borderWidth: 1,
-          data: [Norrköping.jTelefon]
+          data: [Norrkoping.jTelefon]
         }, 
         {
           label: "jPlatta",
           backgroundColor: "rgba(54, 162, 235, 0.6)",
           borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 1,
-          data: [Norrköping.jPlatta]
+          data: [Norrkoping.jPlatta]
         },
         {
           label: "Päronklocka",
           backgroundColor: "rgba(75, 192, 192, 0.6)",
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
-          data: [Norrköping.Päronklocka]
+          data: [Norrkoping.Paronklocka]
         }
       ]
     },
@@ -123,7 +112,7 @@ new Chart(document.getElementById("bar-chart-grouped3"), {
           backgroundColor: "rgba(75, 192, 192, 0.6)",
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
-          data: [Frankfurt.Päronklocka]
+          data: [Frankfurt.Paronklocka]
         }
       ]
     },
