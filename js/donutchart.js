@@ -56,6 +56,22 @@ function displayInfo (){
     + "<br>" + "jPlattor: " + numberWithCommas(Frankfurt.jPlatta)
     + "<br>" + "Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka)
     + "<br>" + "Totalt värde: " + numberWithCommas(Frankfurt.total_value);
+
+    //Display information about the warehouse in Norrköping
+    document.getElementById("NorrkopingInfo").innerHTML = "Lagernummer: " + Norrkoping.lagerID 
+    + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Norrkoping.total_products)
+    + "<br>" + "jTelefoner: " + numberWithCommas(Norrkoping.jTelefon)
+    + "<br>" + "jPlattor: " + numberWithCommas(Norrkoping.jPlatta)
+    + "<br>" + "Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka)
+    + "<br>" + "Totalt värde: " + numberWithCommas(Norrkoping.total_value);
+
+    //Display information about the warehouse in Cupertino
+    document.getElementById("CupertinoInfo").innerHTML = "Lagernummer: " + Cupertino.lagerID 
+    + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
+    + "<br>" + "jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
+    + "<br>" + "jPlattor: " + numberWithCommas(Cupertino.jPlatta)
+    + "<br>" + "Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
+    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value);
 }
     
      
