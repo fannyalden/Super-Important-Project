@@ -6,6 +6,13 @@ var Cupertino = new Cupertino();
 var Norrköping = new Norrköping();
 var Frankfurt = new Frankfurt();
 
+console.log("total value: " + Cupertino.total_value);
+console.log(Cupertino);
+console.log("total value: " + Norrköping.total_value);
+console.log(Norrköping);
+console.log("total value: " + Frankfurt.total_value);
+console.log(Frankfurt);
+
 new Chart(document.getElementById("bar-chart-grouped"), {
     type: 'bar',
     data: {
