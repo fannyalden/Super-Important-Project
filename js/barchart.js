@@ -9,22 +9,22 @@ new Chart(document.getElementById("bar-chart-grouped"), {
       datasets: [
         {
           label: "jTelefon",
-          backgroundColor: "rgba(255, 99, 132, 0.6)",
-          borderColor: "rgba(255, 99, 132, 1)",
+          backgroundColor: "rgba(255, 217, 27, 0.6)", //"rgba(255, 99, 132, 0.6)",
+          borderColor: "rgba(255, 217, 27, 1)",
           borderWidth: 1,
           data: [Cupertino.jTelefon, Norrkoping.jTelefon, Frankfurt.jTelefon]
         }, 
         {
           label: "jPlatta",
-          backgroundColor: "rgba(54, 162, 235, 0.6)",
-          borderColor: "rgba(54, 162, 235, 1)",
+          backgroundColor: "rgba(39, 39, 39, 0.8)", //"rgba(54, 162, 235, 0.6)",
+          borderColor: "rgba(39, 39, 39, 1)",
           borderWidth: 1,
           data: [Cupertino.jPlatta, Norrkoping.jPlatta, Frankfurt.jPlatta]
         },
         {
           label: "Päronklocka",
-          backgroundColor: "rgba(75, 192, 192, 0.6)",
-          borderColor: "rgba(75, 192, 192, 1)",
+          backgroundColor: "rgba(0, 192, 105, 0.6)", //"rgba(0, 192, 105, 0.6)",
+          borderColor: "rgba(0, 192, 105, 1)",
           borderWidth: 1,
           data: [Cupertino.Paronklocka, Norrkoping.Paronklocka, Frankfurt.Paronklocka]
         }

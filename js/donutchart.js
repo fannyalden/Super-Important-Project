@@ -13,22 +13,22 @@ new Chart(document.getElementById("doughnut-chart"), {
       datasets: [
         {
           label: "jTelefon",
-          backgroundColor: ['#3e95cd', '#ffffff'], //"rgba(255, 99, 132, 0.2)", BLÅ
+          backgroundColor: ["rgba(255, 217, 27, 0.6)", '#ffffff'], //"rgba(255, 99, 132, 0.2)", BLÅ: '#3e95cd'
           //borderColor: '#ffffff',
           borderWidth: 5,
           data: [Frankfurt.jTelefon, (Frankfurt.jTelefon_cap-Frankfurt.jTelefon)]
         }, 
         {
           label: "jPlatta",
-          backgroundColor: ['#8e5ea2', '#ffffff'], // rgba(54, 162, 235, 0.2)", LILA
+          backgroundColor: ["rgba(39, 39, 39, 0.8)", '#ffffff'], // rgba(54, 162, 235, 0.2)", LILA: '#8e5ea2'
          // borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 5,
           data: [Frankfurt.jPlatta, (Frankfurt.jPlatta_cap-Frankfurt.jPlatta)]
         },
         {
           label: "Paronklocka",
-          backgroundColor: ['#3cba9f', '#ffffff'], //"rgba(75, 192, 192, 0.2)", GRÖN
-         // borderColor: "rgba(75, 192, 192, 1)",
+          backgroundColor: ["rgba(0, 192, 105, 0.6)", '#ffffff'], //rgb: 0 192 105 //"rgba(75, 192, 192, 0.2)", GRÖN, tidigare '#3cba9f'
+          //borderColor: "rgba(0, 192, 105, 1)",
           borderWidth: 5,
           data: [Frankfurt.Paronklocka, (Frankfurt.Paronklocka_cap-Frankfurt.Paronklocka)]
         }
