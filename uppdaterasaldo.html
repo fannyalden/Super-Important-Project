@@ -49,15 +49,34 @@
 	</header>
 
     <!-- FORM -->
-    <div class ="col-sm-12">
+    <div class ="col-sm-12" id="container">
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
                 <h2>För vilket lager gäller leveransen?</h2>
                     <form action="">
-                        <input type="radio" name="warehouse" value="Cupertino" id="check_C" onclick="checkCity();"> Cupertino<br>
-                        <input type="radio" name="warehouse" value="Norrköping" id="check_N" onclick="checkCity();"> Norrköping<br>
-                        <input type="radio" name="warehouse" value="Frankfurt" id="check_F" onclick="checkCity();"> Frankfurt<br>
+                        <ul>
+                            <li>
+                                <input type="radio" name="warehouse" value="Cupertino" id="check_C" onclick="checkCity();">
+                                <label for="check_C">Cupertino</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" name="warehouse" value="Norrköping" id="check_N" onclick="checkCity();">
+                                <label for="check_N">Norrköping</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                            <li>
+                                <input type="radio" name="warehouse" value="Frankfurt" id="check_F" onclick="checkCity();">
+                                <label for="check_F">Frankfurt</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
                     </form>
             </div>
             <div class="col-sm-3"></div>
