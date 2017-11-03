@@ -3,6 +3,10 @@
     Date: 2017-11-02
 *************************************************************/
 
+var chosenCity = "[välj stad]";
+var chosenProduct = "[välj produkt]";
+var chosenDelivery = "[välj leverans]";
+
 //Check which of the radio buttons is checked for the warehouses
 function checkCity() {
 var cityC = document.getElementById('check_C');
@@ -20,6 +24,7 @@ var cityF = document.getElementById('check_F');
 	}
 
 	console.log("Chosen city: " + chosenCity);
+	displayFeedback();
 }
 
 //Check which of the radio buttons is checked for the products
@@ -38,7 +43,8 @@ var product_Paron = document.getElementById('check_Paron');
 		chosenProduct = product_Paron.value;
 	}
 
-	console.log("Chosen product: " + chosenProduct); 
+	console.log("Chosen product: " + chosenProduct);
+	displayFeedback(); 
 }
 
 //Check which of the radio buttons is checked for the transaction of products
@@ -54,12 +60,13 @@ var utleverans = document.getElementById('check_ut');
 	}
 
 	console.log("Chosen delivery: " + chosenDelivery);
-
-	document.getElementById("feedback").innerHTML = "<br><br>" + "Du har valt att göra en " + "<b>" + chosenDelivery + "</b>" 
-													+ " av produkten  " + "<b>" + chosenProduct + "</b>"  
-													+ " för lagret i " + "<b>" + chosenCity + "</b>.";
-													
+	displayFeedback();													
 }
 
-
+//Display feedback to user about which options are chosen with the radio buttons
+function displayFeedback() {
+	document.getElementById("feedback").innerHTML = "<br><br>" + "Du har valt att göra en " + "<b>" + chosenDelivery + "</b>" 
+													+ " av produkten  " + "<b>" + chosenProduct + "</b>"  
+													+ " för lagret i " + "<b>" + chosenCity + "</b>.";							
+}
 
