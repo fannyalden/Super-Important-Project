@@ -83,7 +83,9 @@ function displayFeedback() {
 	// *********** Ful funktion som förmodligen kan optimeras *************
 function calcFunction() {
 
-	var input = 1000;	//Ska inte vara 1000, ska hämtas från textinput
+	//Get the number of products to be transfered from user input
+	var input = document.getElementById('numberinput').value;
+	console.log("Antal produkter att bli förflyttade: " + input);
 
 	console.log("[Lager: " + this.chosenCity + " ]  " + "[Produkt: " + this.chosenProduct + "]  " + "[Leverans: " + this.chosenDelivery + "]");
 
