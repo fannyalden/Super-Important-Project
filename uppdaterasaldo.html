@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <h2>För vilket lager gäller leveransen?</h2>
+                <h3>För vilket lager gäller leveransen?</h3>
                     <form action="">
                         <ul>
                             <li>
@@ -77,6 +77,7 @@
                                     <div class="inside"></div>
                                 </div>                        
                             </li>
+                        </ul>
                     </form>
             </div>
             <div class="col-sm-3"></div>
@@ -85,11 +86,31 @@
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <h2>Välj önskad produkt:</h2>
+                <h3>Välj önskad produkt:</h3>
                     <form action="">
-                        <input type="radio" name="product" value="jTelefon" id="check_jTel" onclick="checkProduct();"> jTelefon<br>
-                        <input type="radio" name="product" value="jPlatta" id="check_jPlatta" onclick="checkProduct();"> jPlatta<br>
-                        <input type="radio" name="product" value="Päronklocka" id="check_Paron" onclick="checkProduct();"> Päronklocka<br>
+                        <ul>
+                            <li>
+                                <input type="radio" name="product" value="jTelefon" id="check_jTel" onclick="checkProduct();">
+                                <label for="check_jTel">jTelefon</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" name="product" value="jPlatta" id="check_jPlatta" onclick="checkProduct();">
+                                <label for="check_jPlatta">jPlatta</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                            <li>
+                                <input type="radio" name="product" value="Päronklocka" id="check_Paron" onclick="checkProduct();">
+                                <label for="check_Paron">Päronklocka</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                        </ul>
                     </form>
             </div>
             <div class="col-sm-3"></div>
@@ -98,10 +119,24 @@
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <h2>In- eller utleverans?</h2>
+                <h3>In- eller utleverans?</h3>
                     <form action="">
-                        <input type="radio" name="delivery" value="inleverans" id="check_in" onclick="checkDelivery();"> Inleverans<br>
-                        <input type="radio" name="delivery" value="utleverans" id="check_ut" onclick="checkDelivery();"> Utleverans<br>
+                        <ul>
+                            <li>
+                                <input type="radio" name="delivery" value="inleverans" id="check_in" onclick="checkDelivery();">
+                                <label for="check_in">Inleverans</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" name="delivery" value="utleverans" id="check_ut" onclick="checkDelivery();">
+                                <label for="check_ut">Utleverans</label>
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>                        
+                            </li>
+                        </ul>
                     </form>
                     <p id="feedback" align="center"> </p>
             </div>
