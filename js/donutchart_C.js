@@ -15,21 +15,21 @@ var chart_C = new Chart(document.getElementById("chart_C"), {
       datasets: [
         {
           label: "jTelefon",
-          backgroundColor: ["rgba(255, 217, 27, 0.6)", '#ffffff'], 
+          backgroundColor: ["rgba(211, 220, 131, 1)", '#ffffff'], 
           //borderColor: '#ffffff',
           borderWidth: 5,
           data: [Cupertino.jTelefon, (Cupertino.jTelefon_cap-Cupertino.jTelefon)]
         }, 
         {
           label: "jPlatta",
-          backgroundColor: ["rgba(39, 39, 39, 0.8)", '#ffffff'],
+          backgroundColor: ["rgba(118, 175, 10, 1)", '#ffffff'],
          // borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 5,
           data: [Cupertino.jPlatta, (Cupertino.jPlatta_cap-Cupertino.jPlatta)]
         },
         {
           label: "Paronklocka",
-          backgroundColor: ["rgba(0, 192, 105, 0.6)", '#ffffff'], 
+          backgroundColor: ["rgba(48, 70, 6, 1)", '#ffffff'], 
           //borderColor: "rgba(0, 192, 105, 1)",
           borderWidth: 5,
           data: [Cupertino.Paronklocka, (Cupertino.Paronklocka_cap-Cupertino.Paronklocka)]

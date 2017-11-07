@@ -40,15 +40,6 @@ a:hover{
 	border:0
 }
 
-/*--------------------------------
-        BAR CHART by Chart.js
-/*--------------------------------*/
-
-#myChart{
-	width: 50%;
-	height: 50%;
-}
-
 
 /*--------------------------------
         BUTTONS
@@ -227,19 +218,19 @@ input[type=text]:focus {
       FOOTERS
 /*--------------------------------*/
 #infoFooter_C {
-  background-color: rgba(255, 217, 27, 0.6);
-  color: black;
+  background-color: #555555;
+  color: white;
   margin-top: 20px;
 }
 
 #infoFooter_N {
-  background-color: rgba(39, 39, 39, 0.8);
+  background-color: #555555;
   color: white;
   margin-top: 20px;
 }
 
 #infoFooter_F {
-  background-color: rgba(0, 192, 105, 0.6);
-  color: black;
+  background-color: #555555;
+  color: white;
   margin-top: 20px;
 }
