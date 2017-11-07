@@ -64,20 +64,30 @@ function displayFrankfurt (){
 function displayNorrkoping () {  
     document.getElementById("NorrkopingInfo").innerHTML =  
     "jTelefoner: " + numberWithCommas(Norrkoping.jTelefon) 
-    + "&nbsp &nbsp &nbsp &nbsp" + " [Totalt värde: " + numberWithCommas(Norrkoping.jTelefon * Price.jTelefon) + "]"
     + "<br>" + "jPlattor: " + numberWithCommas(Norrkoping.jPlatta)
-    + " [Totalt värde: " + numberWithCommas(Norrkoping.jPlatta * Price.jPlatta) + "]"
     + "<br>" + "Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka)
-    + " [Totalt värde: " + numberWithCommas(Norrkoping.Paronklocka * Price.Paronklocka) + "]"
-    + "<br>" + "Totalt värde: " + numberWithCommas(Norrkoping.total_value)
     // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Norrkoping.total_products)
     + "<br>" + "Lagernummer: " + Norrkoping.lagerID; 
+
+    document.getElementById("NorrkopingInfoValue").innerHTML =  
+    "Totalt värde jTelefoner: " + numberWithCommas(Norrkoping.jTelefon * Price.jTelefon)
+    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Norrkoping.jPlatta * Price.jPlatta)
+    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka * Price.Paronklocka)
+    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Norrkoping.total_value);
 }
 
 //Display information about the warehouse in Cupertino
 function displayCupertino () {  
     document.getElementById("CupertinoInfo").innerHTML = 
     "jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
+    + "<br>" + "jPlattor: " + numberWithCommas(Cupertino.jPlatta)
+    + "<br>" + "Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
+    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value)
+    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
+    + "<br>" + "Lagernummer: " + Cupertino.lagerID;
+
+  document.getElementById("CupertinoInfo").innerHTML = 
+    "Värde av jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
     + "<br>" + "jPlattor: " + numberWithCommas(Cupertino.jPlatta)
     + "<br>" + "Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
     + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value)
