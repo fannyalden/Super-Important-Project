@@ -7,6 +7,12 @@ var Norrkoping = new Norrkoping();
 var Frankfurt = new Frankfurt();
 var Price = new Price();
 
+/*
+var chart_C = document.getElementById("chart_C");
+var chart_N = document.getElementById("chart_N");
+var chart_F = document.getElementById("chart_F");
+*/
+
 /* ------------------
       CUPERTINO
 -------------------*/
