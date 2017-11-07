@@ -1,5 +1,5 @@
 /************************************************************
-    Donut chart
+    Donut charts for every warehouse
 *************************************************************/
 
 var Cupertino = new Cupertino();
@@ -7,6 +7,9 @@ var Norrkoping = new Norrkoping();
 var Frankfurt = new Frankfurt();
 var Price = new Price();
 
+/* ------------------
+      CUPERTINO
+-------------------*/
 new Chart(document.getElementById("doughnut-chart"), {
     type: 'doughnut',
     data: {
@@ -14,21 +17,99 @@ new Chart(document.getElementById("doughnut-chart"), {
       datasets: [
         {
           label: "jTelefon",
-          backgroundColor: ["rgba(255, 217, 27, 0.6)", '#ffffff'], //"rgba(255, 99, 132, 0.2)", BLÅ: '#3e95cd'
+          backgroundColor: ["rgba(255, 217, 27, 0.6)", '#ffffff'], 
+          //borderColor: '#ffffff',
+          borderWidth: 5,
+          data: [Cupertino.jTelefon, (Cupertino.jTelefon_cap-Cupertino.jTelefon)]
+        }, 
+        {
+          label: "jPlatta",
+          backgroundColor: ["rgba(39, 39, 39, 0.8)", '#ffffff'],
+         // borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 5,
+          data: [Cupertino.jPlatta, (Cupertino.jPlatta_cap-Cupertino.jPlatta)]
+        },
+        {
+          label: "Paronklocka",
+          backgroundColor: ["rgba(0, 192, 105, 0.6)", '#ffffff'], 
+          //borderColor: "rgba(0, 192, 105, 1)",
+          borderWidth: 5,
+          data: [Cupertino.Paronklocka, (Cupertino.Paronklocka_cap-Cupertino.Paronklocka)]
+        }
+      ]
+    },
+    options: {
+      title: {
+	        display: false,
+	        text: 'Lagersaldo i Cupertino'
+      	},
+    }
+});
+
+/* ------------------
+      NORRKÖPING
+-------------------*/
+new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+  //labels: ['jTelefon', 'jPlatta', 'Paronklocka'],
+      datasets: [
+        {
+          label: "jTelefon",
+          backgroundColor: ["rgba(255, 217, 27, 0.6)", '#ffffff'], 
+          //borderColor: '#ffffff',
+          borderWidth: 5,
+          data: [Norrkoping.jTelefon, (Norrkoping.jTelefon_cap-Norrkoping.jTelefon)]
+        }, 
+        {
+          label: "jPlatta",
+          backgroundColor: ["rgba(39, 39, 39, 0.8)", '#ffffff'],
+         // borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 5,
+          data: [Norrkoping.jPlatta, (Norrkoping.jPlatta_cap-Norrkoping.jPlatta)]
+        },
+        {
+          label: "Paronklocka",
+          backgroundColor: ["rgba(0, 192, 105, 0.6)", '#ffffff'], 
+          //borderColor: "rgba(0, 192, 105, 1)",
+          borderWidth: 5,
+          data: [Norrkoping.Paronklocka, (Norrkoping.Paronklocka_cap-Norrkoping.Paronklocka)]
+        }
+      ]
+    },
+    options: {
+      title: {
+          display: false,
+          text: 'Lagersaldo i Norrköping'
+        },
+    }
+});
+
+/* ------------------
+      FRANKFURT
+-------------------*/
+new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+  //labels: ['jTelefon', 'jPlatta', 'Paronklocka'],
+      datasets: [
+        {
+          label: "jTelefon",
+          backgroundColor: ["rgba(255, 217, 27, 0.6)", '#ffffff'], 
           //borderColor: '#ffffff',
           borderWidth: 5,
           data: [Frankfurt.jTelefon, (Frankfurt.jTelefon_cap-Frankfurt.jTelefon)]
         }, 
         {
           label: "jPlatta",
-          backgroundColor: ["rgba(39, 39, 39, 0.8)", '#ffffff'], // rgba(54, 162, 235, 0.2)", LILA: '#8e5ea2'
+          backgroundColor: ["rgba(39, 39, 39, 0.8)", '#ffffff'],
          // borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 5,
           data: [Frankfurt.jPlatta, (Frankfurt.jPlatta_cap-Frankfurt.jPlatta)]
         },
         {
           label: "Paronklocka",
-          backgroundColor: ["rgba(0, 192, 105, 0.6)", '#ffffff'], //rgb: 0 192 105 //"rgba(75, 192, 192, 0.2)", GRÖN, tidigare '#3cba9f'
+          backgroundColor: ["rgba(0, 192, 105, 0.6)", '#ffffff'], 
           //borderColor: "rgba(0, 192, 105, 1)",
           borderWidth: 5,
           data: [Frankfurt.Paronklocka, (Frankfurt.Paronklocka_cap-Frankfurt.Paronklocka)]
@@ -37,12 +118,11 @@ new Chart(document.getElementById("doughnut-chart"), {
     },
     options: {
       title: {
-	        display: false,
-	        text: 'Lagersaldo i Frankfurt'
-      	},
+          display: false,
+          text: 'Lagersaldo i Frankfurt'
+        },
     }
 });
-
 
 /************************************************************
     Format how numbers are displayed
