@@ -1,5 +1,5 @@
 /************************************************************
-    Grouped bar chart
+    Donut chart
 *************************************************************/
 
 var Cupertino = new Cupertino();
@@ -43,6 +43,10 @@ new Chart(document.getElementById("doughnut-chart"), {
     }
 });
 
+
+/************************************************************
+    Format how numbers are displayed
+*************************************************************/
 //Display numbers with commas 
 function numberWithCommas(x) {
     var parts = x.toString().split(".");
@@ -50,22 +54,34 @@ function numberWithCommas(x) {
     return parts.join(".");
 }
 
-//Display information about the warehouse in Frankfurt
-function displayFrankfurt (){  
-    document.getElementById("FrankfurtInfo").innerHTML = "Lagernummer: " + Frankfurt.lagerID 
-    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Frankfurt.total_products)
-    + "<br>" + "jTelefoner: " + numberWithCommas(Frankfurt.jTelefon)
-    + "<br>" + "jPlattor: " + numberWithCommas(Frankfurt.jPlatta)
-    + "<br>" + "Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka)
-    + "<br>" + "Totalt värde: " + numberWithCommas(Frankfurt.total_value);
+
+/************************************************************
+    Display information about each warehouse on their pages
+*************************************************************/
+
+//Display information about the warehouse in Cupertino
+function displayCupertino () {  
+    document.getElementById("CupertinoInfo").innerHTML = 
+    "Antal jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
+    + "<br>" + "Antal jPlattor: " + numberWithCommas(Cupertino.jPlatta)
+    + "<br>" + "Antal Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
+    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value)
+    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
+    + "<br>" + "Lagernummer: " + Cupertino.lagerID;
+
+    document.getElementById("CupertinoInfoValue").innerHTML =  
+    "Totalt värde jTelefoner: " + numberWithCommas(Cupertino.jTelefon * Price.jTelefon)
+    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Cupertino.jPlatta * Price.jPlatta)
+    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Cupertino.Paronklocka * Price.Paronklocka)
+    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Cupertino.total_value);
 }
 
 //Display information about the warehouse in Norrköping
 function displayNorrkoping () {  
     document.getElementById("NorrkopingInfo").innerHTML =  
-    "jTelefoner: " + numberWithCommas(Norrkoping.jTelefon) 
-    + "<br>" + "jPlattor: " + numberWithCommas(Norrkoping.jPlatta)
-    + "<br>" + "Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka)
+    "Antal jTelefoner: " + numberWithCommas(Norrkoping.jTelefon) 
+    + "<br>" + "Antal jPlattor: " + numberWithCommas(Norrkoping.jPlatta)
+    + "<br>" + "Antal Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka)
     // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Norrkoping.total_products)
     + "<br>" + "Lagernummer: " + Norrkoping.lagerID; 
 
@@ -76,23 +92,23 @@ function displayNorrkoping () {
     + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Norrkoping.total_value);
 }
 
-//Display information about the warehouse in Cupertino
-function displayCupertino () {  
-    document.getElementById("CupertinoInfo").innerHTML = 
-    "jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
-    + "<br>" + "jPlattor: " + numberWithCommas(Cupertino.jPlatta)
-    + "<br>" + "Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
-    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value)
-    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
-    + "<br>" + "Lagernummer: " + Cupertino.lagerID;
+//Display information about the warehouse in Frankfurt
+function displayFrankfurt (){  
+    document.getElementById("FrankfurtInfo").innerHTML = 
+    "Antal jTelefoner: " + numberWithCommas(Frankfurt.jTelefon)
+    + "<br>" + "Antal jPlattor: " + numberWithCommas(Frankfurt.jPlatta)
+    + "<br>" + "Antal Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka)
+    + "<br>" + "Totalt värde: " + numberWithCommas(Frankfurt.total_value)
+    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Frankfurt.total_products)
+    + "<br>" + "Lagernummer: " + Frankfurt.lagerID;
 
-  document.getElementById("CupertinoInfo").innerHTML = 
-    "Värde av jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
-    + "<br>" + "jPlattor: " + numberWithCommas(Cupertino.jPlatta)
-    + "<br>" + "Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
-    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value)
-    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
-    + "<br>" + "Lagernummer: " + Cupertino.lagerID; 
+    document.getElementById("FrankfurtInfoValue").innerHTML =  
+    "Totalt värde jTelefoner: " + numberWithCommas(Frankfurt.jTelefon * Price.jTelefon)
+    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Frankfurt.jPlatta * Price.jPlatta)
+    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka * Price.Paronklocka)
+    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Frankfurt.total_value);
 }
+
+
     
      
