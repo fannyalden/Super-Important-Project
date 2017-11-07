@@ -1,6 +1,9 @@
 /************************************************************
     Grouped bar chart
 *************************************************************/
+var Cupertino = new Cupertino();
+var Norrkoping = new Norrkoping();
+var Frankfurt = new Frankfurt();
 
 new Chart(document.getElementById("bar-chart-grouped"), {
     type: 'bar',
