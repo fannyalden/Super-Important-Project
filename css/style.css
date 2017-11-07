@@ -23,8 +23,8 @@ a {
     text-decoration: none;
 }
 img{
-	width:42px;
-	height:42px;
+	width:50px;
+	height:auto;
 	border:0
 }
 
@@ -32,6 +32,12 @@ a:hover{
     color: white;
     text-align: center;
     text-decoration: none;
+}
+
+#logo{
+	width:80%;
+	height:auto;
+	border:0
 }
 
 /*--------------------------------
@@ -215,4 +221,25 @@ input[type=text],select{
 
 input[type=text]:focus {
     border: 3px solid #0DFF92; /*green*/
+}
+
+/*--------------------------------
+      FOOTERS
+/*--------------------------------*/
+#infoFooter_C {
+  background-color: rgba(255, 217, 27, 0.6);
+  color: black;
+  margin-top: 20px;
+}
+
+#infoFooter_N {
+  background-color: rgba(39, 39, 39, 0.8);
+  color: white;
+  margin-top: 20px;
+}
+
+#infoFooter_F {
+  background-color: rgba(0, 192, 105, 0.6);
+  color: black;
+  margin-top: 20px;
 }

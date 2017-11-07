@@ -29,6 +29,7 @@
 
 </head>
 <body onload="displayFrankfurt()">
+
 <div class="row">
 	<div class="col-sm-3"> 
 		<a href="index.html">
@@ -38,15 +39,23 @@
 		<h1>Lagersaldo i Frankfurt</h1><br>
 	</div>
 	<div class="col-sm-3"></div>
- </div>  
-	<canvas id="doughnut-chart"></canvas><br>
+</div>  
+	
+<canvas id="chart_F"></canvas><br>
 
+<div class="col-sm-12" id="infoFooter_F">
     <h3>Information om lagret</h3>
-    <p id="FrankfurtInfo"> </p>
+    <div class="col-sm-4">
+        <p id="FrankfurtInfo"> </p>
+    </div>
+    <div class="col-sm-8">
+        <p id="FrankfurtInfoValue"> </p>
+    </div>
+</div>
 
 <!-- Scripts -->
 <script src="js/main.js"></script>
-<script src="js/donutchart.js"></script>
+<script src="js/donutchart_F.js"></script>
 
 
 </body>
