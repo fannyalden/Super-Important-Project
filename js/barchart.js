@@ -12,22 +12,22 @@ new Chart(document.getElementById("bar-chart-grouped"), {
       datasets: [
         {
           label: "jTelefon",
-          backgroundColor: "rgba(255, 217, 27, 0.6)", //"rgba(255, 99, 132, 0.6)",
-          borderColor: "rgba(255, 217, 27, 1)",
+          backgroundColor: "rgba(211, 220, 131, 1)", //"rgba(255, 99, 132, 0.6)",
+          borderColor: "rgba(211, 220, 131, 0.8)",
           borderWidth: 1,
           data: [Cupertino.jTelefon, Norrkoping.jTelefon, Frankfurt.jTelefon]
         }, 
         {
           label: "jPlatta",
-          backgroundColor: "rgba(39, 39, 39, 0.8)", //"rgba(54, 162, 235, 0.6)",
-          borderColor: "rgba(39, 39, 39, 1)",
+          backgroundColor: "rgba(118, 175, 10, 1)", //"rgba(54, 162, 235, 0.6)",
+          borderColor: "rgba(118, 175, 10, 0.8)",
           borderWidth: 1,
           data: [Cupertino.jPlatta, Norrkoping.jPlatta, Frankfurt.jPlatta]
         },
         {
           label: "Päronklocka",
-          backgroundColor: "rgba(0, 192, 105, 0.6)", //"rgba(0, 192, 105, 0.6)",
-          borderColor: "rgba(0, 192, 105, 1)",
+          backgroundColor: "rgba(48, 70, 6, 1)", //"rgba(0, 192, 105, 0.6)",
+          borderColor: "rgba(48, 70, 6, 0.8)",
           borderWidth: 1,
           data: [Cupertino.Paronklocka, Norrkoping.Paronklocka, Frankfurt.Paronklocka]
         }
@@ -36,7 +36,7 @@ new Chart(document.getElementById("bar-chart-grouped"), {
     options: {
       legend: { display: true },
       title: {
-          display: true,
+          display: false,
           text: 'Lagersaldo'
         },
       scales: {

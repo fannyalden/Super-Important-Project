@@ -15,21 +15,21 @@ var chart_N = new Chart(document.getElementById("chart_N"), {
       datasets: [
         {
           label: "jTelefon",
-          backgroundColor: ["rgba(255, 217, 27, 0.6)", '#ffffff'], 
+          backgroundColor: ["rgba(211, 220, 131, 1)", '#ffffff'], 
           //borderColor: '#ffffff',
           borderWidth: 5,
           data: [Norrkoping.jTelefon, (Norrkoping.jTelefon_cap-Norrkoping.jTelefon)]
         }, 
         {
           label: "jPlatta",
-          backgroundColor: ["rgba(39, 39, 39, 0.8)", '#ffffff'],
+          backgroundColor: ["rgba(118, 175, 10, 1)", '#ffffff'],
          // borderColor: "rgba(54, 162, 235, 1)",
           borderWidth: 5,
           data: [Norrkoping.jPlatta, (Norrkoping.jPlatta_cap-Norrkoping.jPlatta)]
         },
         {
           label: "Paronklocka",
-          backgroundColor: ["rgba(0, 192, 105, 0.6)", '#ffffff'], 
+          backgroundColor: ["rgba(48, 70, 6, 1)", '#ffffff'], 
           //borderColor: "rgba(0, 192, 105, 1)",
           borderWidth: 5,
           data: [Norrkoping.Paronklocka, (Norrkoping.Paronklocka_cap-Norrkoping.Paronklocka)]
