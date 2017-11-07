@@ -5,6 +5,7 @@
 var Cupertino = new Cupertino();
 var Norrkoping = new Norrkoping();
 var Frankfurt = new Frankfurt();
+var Price = new Price();
 
 new Chart(document.getElementById("doughnut-chart"), {
     type: 'doughnut',
@@ -52,7 +53,7 @@ function numberWithCommas(x) {
 //Display information about the warehouse in Frankfurt
 function displayFrankfurt (){  
     document.getElementById("FrankfurtInfo").innerHTML = "Lagernummer: " + Frankfurt.lagerID 
-    + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Frankfurt.total_products)
+    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Frankfurt.total_products)
     + "<br>" + "jTelefoner: " + numberWithCommas(Frankfurt.jTelefon)
     + "<br>" + "jPlattor: " + numberWithCommas(Frankfurt.jPlatta)
     + "<br>" + "Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka)
@@ -61,22 +62,27 @@ function displayFrankfurt (){
 
 //Display information about the warehouse in Norrköping
 function displayNorrkoping () {  
-    document.getElementById("NorrkopingInfo").innerHTML = "Lagernummer: " + Norrkoping.lagerID 
-    + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Norrkoping.total_products)
-    + "<br>" + "jTelefoner: " + numberWithCommas(Norrkoping.jTelefon)
+    document.getElementById("NorrkopingInfo").innerHTML =  
+    "jTelefoner: " + numberWithCommas(Norrkoping.jTelefon) 
+    + "&nbsp &nbsp &nbsp &nbsp" + " [Totalt värde: " + numberWithCommas(Norrkoping.jTelefon * Price.jTelefon) + "]"
     + "<br>" + "jPlattor: " + numberWithCommas(Norrkoping.jPlatta)
+    + " [Totalt värde: " + numberWithCommas(Norrkoping.jPlatta * Price.jPlatta) + "]"
     + "<br>" + "Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka)
-    + "<br>" + "Totalt värde: " + numberWithCommas(Norrkoping.total_value);
+    + " [Totalt värde: " + numberWithCommas(Norrkoping.Paronklocka * Price.Paronklocka) + "]"
+    + "<br>" + "Totalt värde: " + numberWithCommas(Norrkoping.total_value)
+    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Norrkoping.total_products)
+    + "<br>" + "Lagernummer: " + Norrkoping.lagerID; 
 }
 
 //Display information about the warehouse in Cupertino
 function displayCupertino () {  
-    document.getElementById("CupertinoInfo").innerHTML = "Lagernummer: " + Cupertino.lagerID 
-    + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
-    + "<br>" + "jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
+    document.getElementById("CupertinoInfo").innerHTML = 
+    "jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
     + "<br>" + "jPlattor: " + numberWithCommas(Cupertino.jPlatta)
     + "<br>" + "Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
-    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value);
+    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value)
+    // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
+    + "<br>" + "Lagernummer: " + Cupertino.lagerID; 
 }
     
      

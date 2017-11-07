@@ -36,12 +36,12 @@ new Chart(document.getElementById("bar-chart-grouped"), {
           display: true,
           text: 'Lagersaldo'
         },
-        scales: {
-            yAxes: [{
-                display: false
-            }],
-
-        }
+      scales: {
+          yAxes: [{
+              display: false
+          }],
+      }//,
+      //maintainAspectRatio: false
     }
 });
 
