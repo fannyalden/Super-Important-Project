@@ -17,15 +17,16 @@ h1 {
   color: #555555;
 }
 
+img{
+  width:50px;
+  height:auto;
+  border:0
+}
+
 a {
     color: white;
     text-align: center;
     text-decoration: none;
-}
-img{
-	width:50px;
-	height:auto;
-	border:0
 }
 
 a:hover{
@@ -53,11 +54,12 @@ a:hover{
 #myChart{
 	width: 50%;
 	height: 50%;
+}
 
-#logo{
-	width:80%;
-	height:auto;
-	border:0
+#logo {
+	width: 80%;
+	height: auto;
+	border: 0;
 }
 
 
