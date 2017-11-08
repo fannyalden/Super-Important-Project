@@ -160,4 +160,19 @@ function calcFunction() {
 		console.log("Något har blivit fel");
 	}
 
+	//Message in the modal to the user to confirm the move of products
+	if (this.chosenDelivery == "inleverans") {
+		document.getElementById("confirmation").innerHTML = "<br>" + "Du har lagt till " + "<b>" + input + "</b>" 
+												+ " produkter av typen  " + "<b>" + this.chosenProduct + "</b>"  
+												+ " i lagret i " + "<b>" + this.chosenCity + "</b>.";
+	}	
+	else if (this.chosenDelivery == "utleverans"){
+		document.getElementById("confirmation").innerHTML = "<br>" + "Du har tagit bort " + "<b>" + input + "</b>" 
+												+ " produkter av typen  " + "<b>" + this.chosenProduct + "</b>"  
+												+ " från lagret i " + "<b>" + this.chosenCity + "</b>.";
+	}	
+	else {
+		document.getElementById("confirmation").innerHTML = "Det blev dock något " + "<b>" + "fel" + "</b>" + "."
+												+ "<br>" + "Vänligen stäng denna ruta och fyll i alla uppgifter korrekt."; 
+	}
 }

@@ -157,14 +157,13 @@
         </div>
         <br><br><br>
 
-        <div class="row">
         <div class ="col-sm-12">
-             <div class="row">
+             <div class="row" style="margin-bottom:40px;">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4 text-center">
                     <!-- Submit button -->
-                    <button type="button" id="submitbutton" onclick="calcFunction()">Bekräfta</button><br><br><br>
-                    <a href="#openModal" id="modal">Open Modal</a><br><br>
+                    <!-- <button type="button" id="submitbutton" onclick="calcFunction()">Bekräfta</button><br><br><br> -->
+                    <a href="#openModal" id="submitbutton" onclick="calcFunction()">Bekräfta</a><br><br><br><br>
                 </div>
                 <div class="col-sm-4"></div>
             </div> 
@@ -173,12 +172,12 @@
         <!--*******************************
                   MODAL CONTENT
         ***********************************-->
-        <div id="openModal" class="modalDialog">
+        <div id="openModal" class="modalDialog" style="text-align:center;">
             <div>
                 <a href="#close" title="Close" class="close">X</a>
-                <h2>Modal Box</h2>
-                <p>This is a sample modal box that can be created using the powers of CSS3.</p>
-                <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+                <h3>Leveransen är registrerad!</h3>
+                <p id="confirmation" align="center" style="font-size:16px;"></p><br>
+                <a href="index.html" id="OKbutton">OK</a><br><br><br>
             </div>
         </div>
 

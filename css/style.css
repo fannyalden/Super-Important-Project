@@ -35,17 +35,6 @@ a:hover{
     text-decoration: none;
 }
 
-#modal{
-  color: black;
-  text-align: center;
-  font-size: 20px;
-}
-
-#modal:hover{
-  color: black;
-  text-align: center;
-  font-size: 20px;
-}
 
 /*--------------------------------
         BAR CHART by Chart.js
@@ -67,6 +56,18 @@ a:hover{
         BUTTONS
 /*--------------------------------*/
 
+#OKbutton {
+  background-color: #555555; /* Black */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
 #submitbutton {
   background-color: #555555; /* Black */
@@ -260,6 +261,20 @@ input[type=text]:focus {
 /*--------------------------------
         MODAL POPUP
 /*--------------------------------*/
+/*
+#modal{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+#modal:hover{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+*/
+
 .modalDialog {
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
@@ -282,7 +297,7 @@ input[type=text]:focus {
 }
 
 .modalDialog > div {
-  width: 400px;
+  width: 500px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
@@ -312,4 +327,6 @@ input[type=text]:focus {
   box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: #00d9ff; }
+.close:hover { 
+  background: #0DFF92; /*green*/
+}
