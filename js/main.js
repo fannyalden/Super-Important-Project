@@ -19,10 +19,33 @@ function Cupertino() {
 	//Warehouse ID
 	this.lagerID = 1;
 
-	//Products in store 
-	this.jTelefon = 170000;
-	this.jPlatta = 41500;
-	this.Paronklocka = 90000; 
+	//Products in store: jTelefon
+	if(sessionStorage.getItem("Cupertino.jTelefon") == null) {
+		sessionStorage.setItem("C.jTelefon", 170000);
+		this.jTelefon = parseInt(sessionStorage.getItem("C.jTelefon"),10);
+	}
+	else 
+		this.jTelefon = parseInt(sessionStorage.getItem("Cupertino.jTelefon"));
+
+	//Products in store: jPlatta
+	if(sessionStorage.getItem("Cupertino.jPlatta") == null) {
+		sessionStorage.setItem("C.jPlatta", 41500);
+		this.jPlatta = parseInt(sessionStorage.getItem("C.jPlatta"),10);
+	}
+	else 
+		this.jPlatta = parseInt(sessionStorage.getItem("Cupertino.jPlatta"));
+	
+	//Products in store: Päronklocka
+	if(sessionStorage.getItem("Cupertino.Paronklocka") == null) {
+		sessionStorage.setItem("C.Paronklocka", 90000);
+		this.Paronklocka = parseInt(sessionStorage.getItem("C.Paronklocka"),10);
+	}
+	else 
+		this.Paronklocka = parseInt(sessionStorage.getItem("Cupertino.Paronklocka"));
+
+	console.log("jTelefoner i Cupertino = " + this.jTelefon);
+	console.log("jPlattor i Cupertino = " + this.jPlatta);
+	console.log("Päronklockor i Cupertino = " + this.Paronklocka);
 
 	//Capacity for each product
 	this.jTelefon_cap = 200000;

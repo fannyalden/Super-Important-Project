@@ -32,7 +32,7 @@ var cityF = document.getElementById('check_F');
 		this.chosenCity = cityF.value;
 	}
 
-	console.log("Chosen city: " + this.chosenCity);
+	//console.log("Chosen city: " + this.chosenCity);
 	displayFeedback();
 }
 
@@ -52,7 +52,7 @@ var product_Paron = document.getElementById('check_Paron');
 		this.chosenProduct = product_Paron.value;
 	}
 
-	console.log("Chosen product: " + this.chosenProduct);
+	//console.log("Chosen product: " + this.chosenProduct);
 	displayFeedback(); 
 }
 
@@ -68,7 +68,7 @@ var utleverans = document.getElementById('check_ut');
 		this.chosenDelivery = utleverans.value;
 	}
 
-	console.log("Chosen delivery: " + this.chosenDelivery);
+	//console.log("Chosen delivery: " + this.chosenDelivery);
 	displayFeedback();													
 }
 
@@ -79,6 +79,9 @@ function displayFeedback() {
 													+ " för lagret i " + "<b>" + this.chosenCity + "</b>.";							
 }
 
+
+
+
 //Do the transaction of products
 	// *********** Ful funktion som förmodligen kan optimeras *************
 function calcFunction() {
@@ -87,27 +90,51 @@ function calcFunction() {
 	var input = document.getElementById('numberinput').value;
 	console.log("Antal produkter att bli förflyttade: " + input);
 
-	console.log("[Lager: " + this.chosenCity + " ]  " + "[Produkt: " + this.chosenProduct + "]  " + "[Leverans: " + this.chosenDelivery + "]");
+	//console.log("[Lager: " + this.chosenCity + " ]  " + "[Produkt: " + this.chosenProduct + "]  " + "[Leverans: " + this.chosenDelivery + "]");
+
+	// Check browser support for session Storage
+	if (typeof(Storage) == "undefined")
+		console.log("Sorry, your browser does not support web storage...");
 
 	//If Cupertino is chosen as city/warehouse
 	if(this.chosenCity == "Cupertino"){
 		if(this.chosenProduct == "jTelefon"){
 			if(this.chosenDelivery == "inleverans") 
-				Cupertino.jTelefon = Cupertino.jTelefon + input; 	//inleverans av jTelefon i Cupertino
+				Cupertino.jTelefon = parseInt(Cupertino.jTelefon) + parseInt(input); 	//inleverans av jTelefon i Cupertino
 			else 
-				Cupertino.jTelefon = Cupertino.jTelefon - input;	//utleverans av jTelefon i Cupertino
+				Cupertino.jTelefon = Cupertino.jTelefon - input;						//utleverans av jTelefon i Cupertino
+
+			//Store new value of Cupertino.jTelefon
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Cupertino.jTelefon", Cupertino.jTelefon);
+			    Cupertino.jTelefon = parseInt(sessionStorage.getItem("Cupertino.jTelefon"));
+		    }
 		}
 		else if (this.chosenProduct == "jPlatta"){
-			if(this.chosenDelivery == "inleverans") 
-				Cupertino.jPlatta = Cupertino.jPlatta + input;	//inleverans av jPlatta i Cupertino
-			else 
-				Cupertino.jPlatta = Cupertino.jPlatta - input;	//utleverans av jPlatta i Cupertino
+			if(this.chosenDelivery == "inleverans") {
+				console.log("jPlattor innan inleverans: " + Cupertino.jPlatta);
+				Cupertino.jPlatta = parseInt(Cupertino.jPlatta) + parseInt(input);	//inleverans av jPlatta i Cupertino
+				console.log("jPlattor efter inleverans: " + Cupertino.jPlatta);
+			} else 
+				Cupertino.jPlatta = Cupertino.jPlatta - input;						//utleverans av jPlatta i Cupertino
+
+			//Store new value of Cupertino.jPlatta
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Cupertino.jPlatta", Cupertino.jPlatta);
+			    Cupertino.jPlatta = parseInt(sessionStorage.getItem("Cupertino.jPlatta"));
+		    }
 		}
 		else {
 			if(this.chosenDelivery == "inleverans") 
-				Cupertino.Paronklocka = Cupertino.Paronklocka + input;	//inleverans av Päronklocka i Cupertino
+				Cupertino.Paronklocka = parseInt(Cupertino.Paronklocka) + parseInt(input);	//inleverans av Päronklocka i Cupertino
 			else 
-				Cupertino.Paronklocka = Cupertino.Paronklocka - input;	//utleverans av Päronklocka i Cupertino
+				Cupertino.Paronklocka = Cupertino.Paronklocka - input;						//utleverans av Päronklocka i Cupertino
+
+			//Store new value of Cupertino.Paronklocka
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Cupertino.Paronklocka", Cupertino.Paronklocka);
+			    Cupertino.Paronklocka = parseInt(sessionStorage.getItem("Cupertino.Paronklocka"));
+		    }
 		}
 		console.log("Leveransen är genomförd för Cupertino.")
 	}
@@ -175,4 +202,5 @@ function calcFunction() {
 		document.getElementById("confirmation").innerHTML = "Det blev dock något " + "<b>" + "fel" + "</b>" + "."
 												+ "<br>" + "Vänligen stäng denna ruta och fyll i alla uppgifter korrekt."; 
 	}
+
 }
