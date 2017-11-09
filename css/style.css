@@ -17,6 +17,13 @@ h1 {
   color: #555555;
 }
 
+#clock {
+  text-align: right;
+  margin-right: 5%;
+  font-size: 20px;
+  color: #555555;
+}
+
 img{
   width:50px;
   height:auto;
@@ -92,11 +99,11 @@ a:hover{
 }
 
 #submitbutton:hover {
-  background-color:  #0DFF92; /*green*/
+  background-color:  rgba(118, 175, 10, 0.8); /*green*/
 }
 
 #submitbutton:focus {
-  background-color:  #0DFF92; /*green*/
+  background-color:  rgba(118, 175, 10, 1); /*green*/
   color: #555555; /* Black */
 }
 
@@ -172,7 +179,7 @@ ul li label{
 }
 
 ul li:hover label{
-  color: #36a2eb; /*blue*/
+  color: rgba(118, 175, 10, 0.8); /*green*/
 }
 
 ul li .check{
@@ -190,7 +197,7 @@ ul li .check{
 }
 
 ul li:hover .check {
-  border: 5px solid #36a2eb;
+  border: 5px solid rgba(118, 175, 10, 0.8); /*green*/   
 }
 
 ul li .check::before {
@@ -208,15 +215,15 @@ ul li .check::before {
 }
 
 input[type=radio]:checked ~ .check {
-  border: 5px solid #0DFF92; /*green*/
+  border: 5px solid rgba(118, 175, 10, 1); /*green*/
 }
 
 input[type=radio]:checked ~ .check::before{
-  background: #0DFF92; /*green*/
+  background: rgba(118, 175, 10, 1); /*green*/
 }
 
 input[type=radio]:checked ~ label{
-  color: #0DFF92;
+  color: rgba(118, 175, 10, 1); /*green*/
 }
 
 
@@ -243,7 +250,7 @@ input[type=text],select{
 */
 
 input[type=text]:focus {
-    border: 3px solid #0DFF92; /*green*/
+    border: 3px solid rgba(118, 175, 10, 1); /*green*/
 }
 
 /*--------------------------------

@@ -64,15 +64,15 @@ function displayCupertino () {
     "Antal jTelefoner: " + numberWithCommas(Cupertino.jTelefon)
     + "<br>" + "Antal jPlattor: " + numberWithCommas(Cupertino.jPlatta)
     + "<br>" + "Antal Päronklockor: " + numberWithCommas(Cupertino.Paronklocka)
-    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value)
+    + "<br>" + "Totalt värde: " + numberWithCommas(Cupertino.total_value) + " SEK"
     // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Cupertino.total_products)
     + "<br>" + "Lagernummer: " + Cupertino.lagerID;
 
     document.getElementById("CupertinoInfoValue").innerHTML =  
-    "Totalt värde jTelefoner: " + numberWithCommas(Cupertino.jTelefon * Price.jTelefon)
-    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Cupertino.jPlatta * Price.jPlatta)
-    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Cupertino.Paronklocka * Price.Paronklocka)
-    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Cupertino.total_value);
+    "Totalt värde jTelefoner: " + numberWithCommas(Cupertino.jTelefon * Price.jTelefon) + " SEK"
+    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Cupertino.jPlatta * Price.jPlatta) + " SEK"
+    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Cupertino.Paronklocka * Price.Paronklocka) + " SEK"
+    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Cupertino.total_value) + " SEK";
 }
 
 
