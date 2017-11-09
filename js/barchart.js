@@ -43,6 +43,9 @@ new Chart(document.getElementById("bar-chart-grouped"), {
           yAxes: [{
               display: false
           }],
+          xAxes: [{
+              display: false
+          }]
       }//,
       //maintainAspectRatio: false
     }
