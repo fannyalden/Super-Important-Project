@@ -313,7 +313,7 @@ input[type=text]:focus {
 }
 
 .modalDialog > div {
-  width: 300px;
+  width: 400px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
@@ -322,7 +322,7 @@ input[type=text]:focus {
 }
 
 .close {
-  background: #606061;
+  background: rgba(118, 175, 10, 1); /*green*/
   color: #FFFFFF;
   line-height: 25px;
   position: absolute;
@@ -341,5 +341,5 @@ input[type=text]:focus {
 }
 
 .close:hover { 
-  background: #0DFF92; /*green*/
+  background: rgba(118, 175, 10, 1); /*green*/
 }
