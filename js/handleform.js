@@ -227,16 +227,20 @@ function calcFunction() {
         	DISPLAY FEEDBACK TO THE USER
 	/*--------------------------------------------*/
 	//Message in the modal to the user to confirm the move of products
-	if (this.chosenDelivery == "inleverans") {
+	if (this.chosenDelivery == "inleverans" && input != 0) {
 		document.getElementById("confirmation").innerHTML = "<br>" + "Du har lagt till " + "<b>" + input + "</b>" 
 												+ " produkter av typen  " + "<b>" + this.chosenProduct + "</b>"  
 												+ " i lagret i " + "<b>" + this.chosenCity + "</b>.";
 	}	
-	else if (this.chosenDelivery == "utleverans"){
+	else if (this.chosenDelivery == "utleverans" && input != 0){
 		document.getElementById("confirmation").innerHTML = "<br>" + "Du har tagit bort " + "<b>" + input + "</b>" 
 												+ " produkter av typen  " + "<b>" + this.chosenProduct + "</b>"  
 												+ " från lagret i " + "<b>" + this.chosenCity + "</b>.";
 	}	
+	else if (input == 0){
+		document.getElementById("confirmation").innerHTML = "Du glömde dock fyll i antal produkter för leverans."
+												+ "<br>" + "Vänligen stäng denna ruta och fyll i alla uppgifter korrekt."; 
+	}
 	else {
 		document.getElementById("confirmation").innerHTML = "Det blev dock något " + "<b>" + "fel" + "</b>" + "."
 												+ "<br>" + "Vänligen stäng denna ruta och fyll i alla uppgifter korrekt."; 
