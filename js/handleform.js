@@ -81,9 +81,10 @@ function displayFeedback() {
 
 
 
-
-//Do the transaction of products
-	// *********** Ful funktion som förmodligen kan optimeras *************
+/*--------------------------------------------
+        DO THE TRANSACTION OF PRODUCTS
+/*--------------------------------------------*/
+// *********** Ful funktion som förmodligen kan optimeras *************
 function calcFunction() {
 
 	//Get the number of products to be transfered from user input
@@ -112,9 +113,7 @@ function calcFunction() {
 		}
 		else if (this.chosenProduct == "jPlatta"){
 			if(this.chosenDelivery == "inleverans") {
-				console.log("jPlattor innan inleverans: " + Cupertino.jPlatta);
 				Cupertino.jPlatta = parseInt(Cupertino.jPlatta) + parseInt(input);	//inleverans av jPlatta i Cupertino
-				console.log("jPlattor efter inleverans: " + Cupertino.jPlatta);
 			} else 
 				Cupertino.jPlatta = Cupertino.jPlatta - input;						//utleverans av jPlatta i Cupertino
 
@@ -142,21 +141,39 @@ function calcFunction() {
 	else if(this.chosenCity == "Norrköping"){
 		if(this.chosenProduct == "jTelefon"){
 			if(this.chosenDelivery == "inleverans") 
-				Norrkoping.jTelefon = Norrkoping.jTelefon + input; 	//inleverans av jTelefon i Norrköping
+				Norrkoping.jTelefon = parseInt(Norrkoping.jTelefon) + parseInt(input); 	//inleverans av jTelefon i Norrköping
 			else 
-				Norrkoping.jTelefon = Norrkoping.jTelefon - input;	//utleverans av jTelefon i Norrköping
+				Norrkoping.jTelefon = Norrkoping.jTelefon - input;						//utleverans av jTelefon i Norrköping
+
+			//Store new value of Norrkoping.jTelefon
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Norrkoping.jTelefon", Norrkoping.jTelefon);
+			    Norrkoping.jTelefon = parseInt(sessionStorage.getItem("Norrkoping.jTelefon"));
+		    }
 		}
 		else if (this.chosenProduct == "jPlatta"){
 			if(this.chosenDelivery == "inleverans") 
-				Norrkoping.jPlatta = Norrkoping.jPlatta + input;	//inleverans av jPlatta i Norrköping
+				Norrkoping.jPlatta = parseInt(Norrkoping.jPlatta) + parseInt(input);	//inleverans av jPlatta i Norrköping
 			else 
-				Norrkoping.jPlatta = Norrkoping.jPlatta - input;	//utleverans av jPlatta i Norrköping
+				Norrkoping.jPlatta = Norrkoping.jPlatta - input;						//utleverans av jPlatta i Norrköping
+
+			//Store new value of Norrkoping.jPlatta
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Norrkoping.jPlatta", Norrkoping.jPlatta);
+			    Norrkoping.jPlatta = parseInt(sessionStorage.getItem("Norrkoping.jPlatta"));
+		    }
 		}
 		else {
 			if(this.chosenDelivery == "inleverans") 
-				Norrkoping.Paronklocka = Norrkoping.Paronklocka + input;	//inleverans av Päronklocka i Norrköping
+				Norrkoping.Paronklocka = parseInt(Norrkoping.Paronklocka) + parseInt(input);	//inleverans av Päronklocka i Norrköping
 			else 
-				Norrkoping.Paronklocka = Norrkoping.Paronklocka - input;	//utleverans av Päronklocka i Norrköping
+				Norrkoping.Paronklocka = Norrkoping.Paronklocka - input;						//utleverans av Päronklocka i Norrköping
+
+			//Store new value of Norrkoping.jPlatta
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Norrkoping.Paronklocka", Norrkoping.Paronklocka);
+			    Norrkoping.Paronklocka = parseInt(sessionStorage.getItem("Norrkoping.Paronklocka"));
+		    }
 		}
 		console.log("Leveransen är genomförd för Norrköping.")
 	}
@@ -187,6 +204,10 @@ function calcFunction() {
 		console.log("Något har blivit fel");
 	}
 
+
+	/*--------------------------------------------
+        	DISPLAY FEEDBACK TO THE USER
+	/*--------------------------------------------*/
 	//Message in the modal to the user to confirm the move of products
 	if (this.chosenDelivery == "inleverans") {
 		document.getElementById("confirmation").innerHTML = "<br>" + "Du har lagt till " + "<b>" + input + "</b>" 

@@ -71,10 +71,33 @@ function Norrkoping() {
 	//Warehouse ID
 	this.lagerID = 2;
 
-	//Products in store 
-	this.jTelefon = 55000;
-	this.jPlatta = 104300;
-	this.Paronklocka = 38000; 
+	//Products in store: jTelefon
+	if(sessionStorage.getItem("Norrkoping.jTelefon") == null) {
+		sessionStorage.setItem("N.jTelefon", 55000);
+		this.jTelefon = parseInt(sessionStorage.getItem("N.jTelefon"),10);
+	}
+	else 
+		this.jTelefon = parseInt(sessionStorage.getItem("Norrkoping.jTelefon"));
+
+	//Products in store: jPlatta
+	if(sessionStorage.getItem("Norrkoping.jPlatta") == null) {
+		sessionStorage.setItem("N.jPlatta", 104300);
+		this.jPlatta = parseInt(sessionStorage.getItem("N.jPlatta"),10);
+	}
+	else 
+		this.jPlatta = parseInt(sessionStorage.getItem("Norrkoping.jPlatta"));
+	
+	//Products in store: Päronklocka
+	if(sessionStorage.getItem("Norrkoping.Paronklocka") == null) {
+		sessionStorage.setItem("N.Paronklocka", 38000);
+		this.Paronklocka = parseInt(sessionStorage.getItem("N.Paronklocka"),10);
+	}
+	else 
+		this.Paronklocka = parseInt(sessionStorage.getItem("Norrkoping.Paronklocka"));
+
+	console.log("jTelefoner i Norrköping = " + this.jTelefon);
+	console.log("jPlattor i Norrköping = " + this.jPlatta);
+	console.log("Päronklockor i Norrköping = " + this.Paronklocka);
 
 	//Capacity for each product
 	this.jTelefon_cap = 100000;
