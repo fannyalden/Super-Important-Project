@@ -163,7 +163,7 @@ ul li label{
 }
 
 ul li:hover label{
-  color: #36a2eb; /*blue*/
+  color: rgba(118, 175, 10, 0.8); /*green*/
 }
 
 ul li .check{
@@ -181,7 +181,7 @@ ul li .check{
 }
 
 ul li:hover .check {
-  border: 5px solid #36a2eb;
+  border: 5px solid rgba(118, 175, 10, 0.8); /*green*/   
 }
 
 ul li .check::before {
@@ -199,15 +199,15 @@ ul li .check::before {
 }
 
 input[type=radio]:checked ~ .check {
-  border: 5px solid #0DFF92; /*green*/
+  border: 5px solid rgba(118, 175, 10, 1); /*green*/
 }
 
 input[type=radio]:checked ~ .check::before{
-  background: #0DFF92; /*green*/
+  background: rgba(118, 175, 10, 1); /*green*/
 }
 
 input[type=radio]:checked ~ label{
-  color: #0DFF92;
+  color: rgba(118, 175, 10, 1); /*green*/
 }
 
 
