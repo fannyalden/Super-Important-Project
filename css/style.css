@@ -83,11 +83,11 @@ a:hover{
 }
 
 #submitbutton:hover {
-  background-color:  #0DFF92; /*green*/
+  background-color:  rgba(118, 175, 10, 0.8); /*green*/
 }
 
 #submitbutton:focus {
-  background-color:  #0DFF92; /*green*/
+  background-color:  rgba(118, 175, 10, 1); /*green*/
   color: #555555; /* Black */
 }
 
@@ -234,7 +234,7 @@ input[type=text],select{
 */
 
 input[type=text]:focus {
-    border: 3px solid #0DFF92; /*green*/
+    border: 3px solid rgba(118, 175, 10, 1); /*green*/
 }
 
 /*--------------------------------
