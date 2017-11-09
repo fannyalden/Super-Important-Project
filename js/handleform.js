@@ -181,23 +181,41 @@ function calcFunction() {
 	else if(this.chosenCity == "Frankfurt"){
 		if(this.chosenProduct == "jTelefon"){
 			if(this.chosenDelivery == "inleverans") 
-				Frankfurt.jTelefon = Frankfurt.jTelefon + input; 	//inleverans av jTelefon i Frankfurt
+				Frankfurt.jTelefon = parseInt(Frankfurt.jTelefon) + parseInt(input); 	//inleverans av jTelefon i Frankfurt
 			else 
-				Frankfurt.jTelefon = Frankfurt.jTelefon - input;	//utleverans av jTelefon i Frankfurt
+				Frankfurt.jTelefon = Frankfurt.jTelefon - input;						//utleverans av jTelefon i Frankfurt
+
+			//Store new value of Norrkoping.jTelefon
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Frankfurt.jTelefon", Frankfurt.jTelefon);
+			    Frankfurt.jTelefon = parseInt(sessionStorage.getItem("Frankfurt.jTelefon"));
+		    }
 		}
 		else if (this.chosenProduct == "jPlatta"){
 			if(this.chosenDelivery == "inleverans") 
-				Frankfurt.jPlatta = Frankfurt.jPlatta + input;	//inleverans av jPlatta i Frankfurt
+				Frankfurt.jPlatta = parseInt(Frankfurt.jPlatta) + parseInt(input);	//inleverans av jPlatta i Frankfurt
 			else 
 				Frankfurt.jPlatta = Frankfurt.jPlatta - input;	//utleverans av jPlatta i Frankfurt
+
+			//Store new value of Norrkoping.jTelefon
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Frankfurt.jPlatta", Frankfurt.jPlatta);
+			    Frankfurt.jPlatta = parseInt(sessionStorage.getItem("Frankfurt.jPlatta"));
+			}
 		}
 		else {
 			if(this.chosenDelivery == "inleverans") 
-				Frankfurt.Paronklocka = Frankfurt.Paronklocka + input;	//inleverans av Päronklocka i Frankfurt
+				Frankfurt.Paronklocka = parseInt(Frankfurt.Paronklocka) + parseInt(input);	//inleverans av Päronklocka i Frankfurt
 			else 
 				Frankfurt.Paronklocka = Frankfurt.Paronklocka - input;	//utleverans av Päronklocka i Frankfurt
+
+			//Store new value of Norrkoping.jTelefon
+			if (typeof(Storage) !== "undefined") {
+			    sessionStorage.setItem("Frankfurt.Paronklocka", Frankfurt.Paronklocka);
+			    Frankfurt.Paronklocka = parseInt(sessionStorage.getItem("Frankfurt.Paronklocka"));
+			}
 		}
-		console.log("Leveransen är genomförd för Frankfurt.")
+		console.log("Leveransen är genomförd för Frankfurt.");
 	}
 	//Default
 	else {
