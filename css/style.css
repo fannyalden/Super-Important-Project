@@ -35,6 +35,11 @@ a:hover{
     text-decoration: none;
 }
 
+#colorInfo {
+  width:120px;
+  height:auto;
+}
+
 
 /*--------------------------------
         BAR CHART by Chart.js
@@ -46,7 +51,7 @@ a:hover{
 }
 
 #logo {
-	width: 80%;
+	width: 200px;
 	height: auto;
 	border: 0;
 }
@@ -55,6 +60,10 @@ a:hover{
 /*--------------------------------
         BUTTONS
 /*--------------------------------*/
+
+#infoButton {
+  background-color: #FFFFFF;
+}
 
 #OKbutton {
   background-color: #555555; /* Black */
@@ -282,7 +291,7 @@ input[type=text]:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.4);
   z-index: 99999;
   opacity:0;
   -webkit-transition: opacity 400ms ease-in;
@@ -297,15 +306,12 @@ input[type=text]:focus {
 }
 
 .modalDialog > div {
-  width: 500px;
+  width: 300px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: #fff;
-  background: -moz-linear-gradient(#fff, #999);
-  background: -webkit-linear-gradient(#fff, #999);
-  background: -o-linear-gradient(#fff, #999);
 }
 
 .close {
