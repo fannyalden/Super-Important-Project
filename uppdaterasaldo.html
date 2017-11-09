@@ -39,13 +39,16 @@
 
 </head>
 
-<body>
+<body id="load">
 	<header>
       <div class ="col-sm-12">
         <div class="row"> 
-			<div class="col-sm-2 text left"><a href="index.html"><img src="img\arrows.png"></a></div>
-			<div class="col-sm-8 text-center"><h1> Uppdatera saldo </h1></div>
-			<div class="col-sm-2 text-right"><p id="date"><script> document.write(new Date().toLocaleDateString()); </script></p></div>
+			<div class="col-sm-3 text left"><a href="index.html"><img src="img\arrows.png"></a></div>
+			<div class="col-sm-6 text-center"><h1> Uppdatera saldo </h1></div>
+			<div class="col-sm-3 text-right">
+                <p id="date"><script> document.write(new Date().toLocaleDateString()); </script></p>
+                <p id="clock"></p>
+            </div>
 		</div>
 	</div>
 	</header>
@@ -190,6 +193,7 @@
 <script src="js/main.js"></script>
 <script src="js/barchart.js"></script>
 <script src="js/handleform.js"></script>
+<script src="js/clock.js"></script>
 
 </body>
 
