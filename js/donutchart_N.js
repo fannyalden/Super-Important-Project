@@ -63,15 +63,15 @@ function displayNorrkoping () {
     document.getElementById("NorrkopingInfo").innerHTML =  
     "Antal jTelefoner: " + numberWithCommas(Norrkoping.jTelefon) 
     + "<br>" + "Antal jPlattor: " + numberWithCommas(Norrkoping.jPlatta)
-    + "<br>" + "Antal Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka)
+    + "<br>" + "Antal Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka) + " SEK"
     // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Norrkoping.total_products)
     + "<br>" + "Lagernummer: " + Norrkoping.lagerID; 
 
     document.getElementById("NorrkopingInfoValue").innerHTML =  
-    "Totalt värde jTelefoner: " + numberWithCommas(Norrkoping.jTelefon * Price.jTelefon)
-    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Norrkoping.jPlatta * Price.jPlatta)
-    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka * Price.Paronklocka)
-    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Norrkoping.total_value);
+    "Totalt värde jTelefoner: " + numberWithCommas(Norrkoping.jTelefon * Price.jTelefon) + " SEK"
+    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Norrkoping.jPlatta * Price.jPlatta) + " SEK"
+    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Norrkoping.Paronklocka * Price.Paronklocka) + " SEK"
+    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Norrkoping.total_value) + " SEK";
 }
 
     

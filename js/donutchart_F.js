@@ -65,15 +65,15 @@ function displayFrankfurt (){
     "Antal jTelefoner: " + numberWithCommas(Frankfurt.jTelefon)
     + "<br>" + "Antal jPlattor: " + numberWithCommas(Frankfurt.jPlatta)
     + "<br>" + "Antal Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka)
-    + "<br>" + "Totalt värde: " + numberWithCommas(Frankfurt.total_value)
+    + "<br>" + "Totalt värde: " + numberWithCommas(Frankfurt.total_value) + " SEK"
     // + "<br>" + "Totalt antar produkter i lagret: " + numberWithCommas(Frankfurt.total_products)
     + "<br>" + "Lagernummer: " + Frankfurt.lagerID;
 
     document.getElementById("FrankfurtInfoValue").innerHTML =  
-    "Totalt värde jTelefoner: " + numberWithCommas(Frankfurt.jTelefon * Price.jTelefon)
-    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Frankfurt.jPlatta * Price.jPlatta)
-    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka * Price.Paronklocka)
-    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Frankfurt.total_value);
+    "Totalt värde jTelefoner: " + numberWithCommas(Frankfurt.jTelefon * Price.jTelefon) + " SEK"
+    + "<br>" + "Totalt värde jPlattor: " + numberWithCommas(Frankfurt.jPlatta * Price.jPlatta) + " SEK"
+    + "<br>" + "Totalt värde Päronklockor: " + numberWithCommas(Frankfurt.Paronklocka * Price.Paronklocka) + " SEK"
+    + "<br>" + "Totalt värde i lagret: " + numberWithCommas(Frankfurt.total_value) + " SEK";
 }
 
 
