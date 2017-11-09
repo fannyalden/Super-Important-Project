@@ -17,6 +17,13 @@ h1 {
   color: #555555;
 }
 
+#clock {
+  text-align: right;
+  margin-right: 5%;
+  font-size: 20px;
+  color: #555555;
+}
+
 img{
   width:50px;
   height:auto;

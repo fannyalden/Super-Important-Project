@@ -122,3 +122,4 @@ function Frankfurt() {
 						+ this.Price.jPlatta * this.jPlatta 
 						+ this.Price.Paronklocka * this.Paronklocka;
 };
+
